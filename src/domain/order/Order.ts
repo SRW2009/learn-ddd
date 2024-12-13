@@ -1,4 +1,4 @@
-import type { Customer } from "../customer/Customer";
+import type { Kamar } from "../kamar/Kamar";
 import type { Kucing } from "../kucing/Kucing";
 import type { Resepsionis } from "../resepsionis/Resepsionis";
 import { OrderBelomDibayar } from "./state/OrderBelumDibayar";
@@ -11,8 +11,8 @@ export class Order {
     constructor(
         readonly id: number,
         readonly resepsionis: Resepsionis,
-        readonly customer: Customer,
         readonly kucing: Kucing,
+        readonly kamar: Kamar,
         readonly waktuPenitipan: Date,
         readonly waktuPengembalian: Date,
         readonly harga: number,
@@ -24,17 +24,5 @@ export class Order {
 
     bayar() {
         this.state.bayar()
-    }
-
-    jumlahkan(a: number, b: number): number {
-        if (a == 5 && b == 5) return 100
-        return a + b
-    }
-
-    pembagian(a: number, b: number): any {
-        if (a == 5 && b == 5) return 1
-        else if (a > 10 && b < 100) return a + b
-        else if (a <= 0 && b >= 0) return b / a
-        return 'kucing'
     }
 }

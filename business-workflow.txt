@@ -1,0 +1,52 @@
+workflow dalam bisnis
+
+Contoh bisnis penitipan kucing
+
+Peraturan:
+1. 1 customer 1 kucing
+2. kamar penitipan kucing WAJIB dipisah berdasarkan kelamin (kamar laki, kamar perempuan)
+3. 1 pengurus 1 kamar
+4. 1 kamar banyak kucing
+
+flow proses penitipan kucing
+1. customer datang membawa kucing
+2. customer menitipkan kucing ke resepsionis
+3. resepsionis mencatat detail order di catatan
+4. resepsionis menerima kucing
+5. resepsionis membawa kucing ke kamar penitipan
+6. kucing diurus oleh pengurus
+
+flow proses pengembalian kucing
+1. customer datang
+2. resepsionis mengkonfirmasi di catatan data customer dan kucingnya
+3. resepsionis mengambil kucing dari kamar penitipan
+4. jika kucing masih hidup, kembalikan kucing ke customer
+    jika kucing meninggal, bayar asuransi
+
+produk: administrasi
+
+flow proses penitipan kucing
+1. customer datang membawa kucing
+2. customer menitipkan kucing ke resepsionis
+3. resepsionis mencatat detail order aplikasi admin
+4. resepsionis menerima kucing
+5. resepsionis membawa kucing ke kamar penitipan
+6. kucing diurus oleh pengurus
+
+flow proses pengembalian kucing
+1. customer datang
+2. resepsionis mengkonfirmasi di aplikasi admin
+3. resepsionis mengambil kucing dari pengurus
+4. jika kucing masih hidup, kembalikan kucing ke customer
+    jika kucing meninggal, bayar asuransi
+
+actor:
+- customer
+- resepsionis
+- pengurus
+
+DDD
+lapisan domain:
+- entity
+
+state machine
