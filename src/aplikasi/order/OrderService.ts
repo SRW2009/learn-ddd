@@ -47,4 +47,15 @@ export class OrderService {
             harga
         )
     }
+
+    async renewOrder(fromOrderId: number): Promise<void> {
+        let order = await this.orderRepository.getOrder(fromOrderId)
+        await this.orderRepository.addOrder(
+            order.resepsionis.id,
+            order.kucing.id,
+            order.waktuPenitipan,
+            order.waktuPengembalian,
+            order.harga
+        )
+    }
 }

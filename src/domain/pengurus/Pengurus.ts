@@ -1,5 +1,3 @@
-import type { Kamar } from "../kamar/Kamar";
-import type { Kucing } from "../kucing/Kucing";
 
 export class Pengurus {
     constructor(
