@@ -1,7 +1,7 @@
 import { Order } from "@/domain/order/Order"
 import { resepsionisToDomain, type ResepsionisAPI } from "../resepsionis/ResepsionisAPI"
 import { kucingToDomain, type KucingAPI } from "../kucing/KucingAPI"
-import { kamarToDomain, type KamarAPI } from "../kamar/KamarApi"
+import { kamarToDomain, type KamarAPI } from "../kamar/KamarAPI"
 
 export type OrderAPI = {
     id: number,
